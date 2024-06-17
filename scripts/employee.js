@@ -15,7 +15,7 @@ function handleSubmit(event) {
 
   // Requisição POST usando Axios
   axios
-    .post("http://localhost:3000/employees", formData)
+    .post("http://localhost:3001/employees", formData)
     .then((response) => {
       console.log("Dados enviados com sucesso:", response.data);
     })
@@ -34,7 +34,7 @@ function populateDepartmentsSelect() {
 
   // Faz a requisição para obter os departamentos
   axios
-    .get("http://localhost:3000/departments")
+    .get("http://localhost:3001/departments")
     .then((response) => {
       const departments = response.data;
 
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", populateDepartmentsSelect);
 // Função para buscar os dados dos funcionários da API
 function fetchEmployees() {
   axios
-    .get("http://localhost:3000/employees")
+    .get("http://localhost:3001/employees")
     .then((response) => {
       const employees = response.data;
       const employeeCardsContainer = document.getElementById("employeeCards");
